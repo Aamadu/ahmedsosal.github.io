@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Sosal - Linguistic Explorer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <style>
+        .hero {
+            background-image: url('https://source.unsplash.com/1600x900/?african,landscape');
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-link:hover {
+            color: #F59E0B;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100">
+    <header class="bg-gray-800 text-white sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold">Ahmed Sosal</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#publications" class="nav-link">Publications</a>
+                <a href="#teaching" class="nav-link">Teaching</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="md:hidden" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-700 p-4">
+            <a href="#home" class="block py-2">Home</a>
+            <a href="#about" class="block py-2">About</a>
+            <a href="#research" class="block py-2">Research</a>
+            <a href="#publications" class="block py-2">Publications</a>
+            <a href="#teaching" class="block py-2">Teaching</a>
+            <a href="#blog" class="block py-2">Blog</a>
+            <a href="#contact" class="block py-2">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero h-screen flex items-center">
+            <div class="container mx-auto px-6 text-white">
+                <h1 class="text-5xl font-bold mb-4">Unraveling the Tapestry of East African Languages</h1>
+                <p class="text-xl mb-8">Dr. Ahmed Sosal | Linguist | Researcher | Educator</p>
+                <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded">Get in Touch</a>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-8">About Me</h2>
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full md:w-1/2 px-4 mb-8">
+                        <img src="https://source.unsplash.com/600x400/?portrait" alt="Ahmed Sosal" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="w-full md:w-1/2 px-4">
+                        <p class="mb-4">I am a passionate linguist dedicated to unraveling the complexities of language through rigorous research and fieldwork. Currently pursuing my PhD at Leiden University, I am deeply engaged in the study of East Cushitic languages, with a particular focus on their phonological and morphological aspects.</p>
+                        <h3 class="text-xl font-semibold mb-2">Education</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>PhD in Linguistics, Leiden University, Netherlands (2020 - present)</li>
+                            <li>MA in Linguistics, University of Cape Town, South Africa (2017 - 2019)</li>
+                            <li>BA in Linguistics (Honors), University of Khartoum, Sudan (2007 - 2012)</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold mb-2">Areas of Expertise</h3>
+                        <ul class="list-disc list-inside">
+                            <li>Phonological and morphological studies</li>
+                            <li>East Cushitic languages</li>
+                            <li>Linguistic fieldwork</li>
+                            <li>Historical linguistics</li>
+                            <li>Language documentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-8">Research</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-4">Current Projects</h3>
+                        <ul class="list-disc list-inside">
+                            <li class="mb-2">A Lexical and Phonological Reconstruction of East Cushitic</li>
+                            <li>Early Linguistic History of East Africa (LHEAf) Project</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-4">Fieldwork Experience</h3>
+                        <ul class="list-disc list-inside">
+                            <li class="mb-2">Tanzania (2021 - 2022): Collected data from 8 languages</li>
+                            <li class="mb-2">Sudan (2016 - 2018): Collected data on the Tegem language</li>
+                            <li>Tagoi Language Orthography Development Project (2015 - 2018)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-8">Publications</h2>
+                <div class="space-y-6">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Forthcoming</h3>
+                        <p class="mb-2"><strong>Sosal, A.</strong> (Forthcoming). <em>A Lexical and Phonological Reconstruction of East Cushitic</em>. Utrecht: LOT dissertation series.</p>
+                        <p><strong>Beer, S., Harvey, A., Mous, M., Rapold C., Schrock, T. and Sosal, A.</strong> (Forthcoming). Lateral obstruents in East Africa from an areal and historical perspective. In Darquennes, J., Salmons, J. and Vandenbussche, W. (Ed.), <em>Language Contact: An international handbook. Vol. 2</em>. Berlin & Boston: de Gruyter.</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Published</h3>
+                        <p><strong>Idris, H. F., Bashir, A. M., Nadhid, S. A. A. M., Ibrahim, M. H., & Sosal, A.</strong> (Eds.). (2018). Tagoi Alphabet Book:[‏ كتاب حروف لغة تقوي/‏]{dir="rtl"}. Khartoum University Press.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="teaching" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-8">Teaching Experience</h2>
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-2">Leiden University, Netherlands</h3>
+                        <p class="mb-2">Lecturer, Leiden Summer School in Languages and Linguistics (2021, 2022 & 2023)</p>
+                        <p>Lecturer, Leiden University Centre for Linguistics (Feb. 2022 - Mar. 2022)</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-2">University of Cape Town, South Africa</h3>
+                        <p>Academic Tutor, Linguistics Section (Aug. 2017 - Nov. 2017)</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-2">University of Khartoum, Sudan</h3>
+                        <p>Teaching Assistant, Department of Linguistics (July 2014 to Jan. 2017)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-8">Latest Blog Posts</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://source.unsplash.com/400x250/?linguistics" alt="Blog post image" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">The Fascinating World of East Cushitic Languages</h3>
+                            <p class="mb-4">Explore the unique features and historical significance of East Cushitic languages in this comprehensive overview.</p>
+                            <a href="#" class="text-blue-500 hover:underline">Read more</a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://source.unsplash.com/400x250/?africa" alt="Blog post image" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Fieldwork Chronicles: Challenges and Triumphs</h3>
+                            <p class="mb-4">Join me as I recount my experiences conducting linguistic fieldwork in remote areas of East Africa.</p>
+                            <a href="#" class="text-blue-500 hover:underline">Read more</a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://source.unsplash.com/400x250/?language" alt="Blog post image" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">The Importance of Language Documentation</h3>
+                            <p class="mb-4">Discover why preserving endangered languages is crucial for maintaining cultural diversity and human knowledge.</p>
+                            <a href="#" class="text-blue-500 hover:underline">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full md:w-1/2 px-4 mb-8">
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full p-2 border rounded" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full p-2 border rounded" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full p-2 border rounded" required></textarea>
+                            </div>
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="w-full md:w-1/2 px-4">
+                        <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                        <p class="mb-2"><strong>Email:</strong> ahmedsosal@gmail.com</p>
+                        <p class="mb-2"><strong>Phone:</strong> (0031) 63-909-7454 | (00249) 922-398-772</p>
+                        <p class="mb-4"><strong>Address:</strong> Bloemistenlaan 49, 2313 BA Leiden, Netherlands</p>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/ahmedsosal" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600">
+                                <i class="fab fa-linkedin fa-2x"></i>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600">
+                                <i class="fab fa-researchgate fa-2x"></i>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600">
+                                <i class="fab fa-academia fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">Ahmed Sosal</h3>
+                    <p>Linguist | Researcher | Educator</p>
+                </div>
+                <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-yellow-500">Home</a></li>
+                        <li><a href="#about" class="hover:text-yellow-500">About</a></li>
+                        <li><a href="#research" class="hover:text-yellow-500">Research</a></li>
+                        <li><a href="#publications" class="hover:text-yellow-500">Publications</a></li>
+                        <li><a href="#teaching" class="hover:text-yellow-500">Teaching</a></li>
+                        <li><a href="#blog" class="hover:text-yellow-500">Blog</a></li>
+                        <li><a href="#contact" class="hover:text-yellow-500">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/3">
+                    <h3 class="text-xl font-bold mb-2">Newsletter</h3>
+                    <p class="mb-4">Stay updated with my latest research and publications.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="flex-grow p-2 rounded-l focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-r">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2024 Ahmed Sosal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Intersection Observer for section highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        if (link.getAttribute('href') === `#${entry.target.id}`) {
+                            link.classList.add('text-yellow-500');
+                        } else {
+                            link.classList.remove('text-yellow-500');
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Form submission (you would need to implement the backend for this)
+        const contactForm = document.querySelector('#contact form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Here you would typically send the form data to your server
+            alert('Thank you for your message. I will get back to you soon!');
+            contactForm.reset();
+        });
+
+        // Newsletter subscription (you would need to implement the backend for this)
+        const newsletterForm = document.querySelector('footer form');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Here you would typically send the email to your server for subscription
+            alert('Thank you for subscribing to my newsletter!');
+            newsletterForm.reset();
+        });
+    </script>
+</body>
+</html>
