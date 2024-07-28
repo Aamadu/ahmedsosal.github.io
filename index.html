@@ -12,10 +12,26 @@
             height: 100vh;
             background-size: cover;
             background-position: center;
-
         }
         .nav-link:hover {
             color: #F59E0B;
+        }
+        .section-heading {
+            @apply text-3xl font-bold mb-8 text-center;
+        }
+        .card {
+            @apply bg-white p-6 rounded-lg shadow-lg transition duration-300 ease-in-out;
+        }
+        .card:hover {
+            @apply transform -translate-y-1 shadow-xl;
+        }
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .collapsible-content.open {
+            max-height: 1000px; /* Adjust this value as needed */
         }
     </style>
 </head>
@@ -24,11 +40,10 @@
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#" class="text-xl font-bold">Ahmed Sosal</a>
             <div class="hidden md:flex space-x-4">
-                <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
-                <a href="#research" class="nav-link">Research</a>
                 <a href="#publications" class="nav-link">Publications</a>
-                <a href="#teaching" class="nav-link">Teaching</a>
+                <a href="#presentations" class="nav-link">Presentations</a>
+                <a href="#cushitic-database" class="nav-link">Cushitic Database</a>
                 <a href="#blog" class="nav-link">Blog</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
@@ -37,11 +52,10 @@
             </button>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden bg-gray-700 p-4">
-            <a href="#home" class="block py-2">Home</a>
             <a href="#about" class="block py-2">About</a>
-            <a href="#research" class="block py-2">Research</a>
             <a href="#publications" class="block py-2">Publications</a>
-            <a href="#teaching" class="block py-2">Teaching</a>
+            <a href="#presentations" class="block py-2">Presentations</a>
+            <a href="#cushitic-database" class="block py-2">Cushitic Database</a>
             <a href="#blog" class="block py-2">Blog</a>
             <a href="#contact" class="block py-2">Contact</a>
         </div>
@@ -83,24 +97,41 @@
                 </div>
             </div>
         </section>
-
-        <section id="research" class="py-20 bg-gray-100">
+        
+        <section id="research-teaching" class="py-20 bg-gray-100">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold mb-8">Research</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow">
-                        <h3 class="text-xl font-semibold mb-4">Current Projects</h3>
-                        <ul class="list-disc list-inside">
-                            <li class="mb-2">A Lexical and Phonological Reconstruction of East Cushitic</li>
+                <h2 class="text-3xl font-bold mb-8">Research & Teaching</h2>
+                <div class="space-y-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4">Research</h3>
+                        <h4 class="text-xl font-semibold mb-4">Current Projects</h4>
+                        <ul class="list-disc list-inside mb-6">
+                            <li>A Lexical and Phonological Reconstruction of East Cushitic</li>
                             <li>Early Linguistic History of East Africa (LHEAf) Project</li>
                         </ul>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow">
-                        <h3 class="text-xl font-semibold mb-4">Fieldwork Experience</h3>
+                        <h4 class="text-xl font-semibold mb-4">Fieldwork Experience</h4>
                         <ul class="list-disc list-inside">
                             <li class="mb-2">Tanzania (2021 - 2022): Collected data from 8 languages</li>
                             <li class="mb-2">Sudan (2016 - 2018): Collected data on the Tegem language</li>
                             <li>Tagoi Language Orthography Development Project (2015 - 2018)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4">Teaching Experience</h3>
+                        <ul class="space-y-4">
+                            <li>
+                                <p class="font-semibold">Leiden University, Netherlands</p>
+                                <p>Lecturer, Leiden Summer School in Languages and Linguistics (2021, 2022 & 2023)</p>
+                                <p>Lecturer, Leiden University Centre for Linguistics (Feb. 2022 - Mar. 2022)</p>
+                            </li>
+                            <li>
+                                <p class="font-semibold">University of Cape Town, South Africa</p>
+                                <p>Academic Tutor, Linguistics Section (Aug. 2017 - Nov. 2017)</p>
+                            </li>
+                            <li>
+                                <p class="font-semibold">University of Khartoum, Sudan</p>
+                                <p>Teaching Assistant, Department of Linguistics (July 2014 to Jan. 2017)</p>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -124,22 +155,136 @@
             </div>
         </section>
 
-        <section id="teaching" class="py-20 bg-gray-100">
+        <section id="presentations" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold mb-8">Teaching Experience</h2>
-                <div class="space-y-6">
-                    <div class="bg-white p-6 rounded-lg shadow">
-                        <h3 class="text-xl font-semibold mb-2">Leiden University, Netherlands</h3>
-                        <p class="mb-2">Lecturer, Leiden Summer School in Languages and Linguistics (2021, 2022 & 2023)</p>
-                        <p>Lecturer, Leiden University Centre for Linguistics (Feb. 2022 - Mar. 2022)</p>
+                <h2 class="section-heading">Presentations</h2>
+                <div class="space-y-8">
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold mb-4 cursor-pointer" onclick="toggleCollapsible('conferences')">
+                            Conferences <i class="fas fa-chevron-down ml-2"></i>
+                        </h3>
+                        <div id="conferences" class="collapsible-content">
+                            <ul class="space-y-4">
+                                <li>
+                                    <p class="font-semibold">International Conference on Historical Linguistics (ICHL25)</p>
+                                    <p>1-5 Aug. 2022, University of Oxford, United Kingdom</p>
+                                    <p>Historical development of the pluratives in Cushitic (Poster) <a href="#" class="text-blue-500 hover:underline">[Slides]</a></p>
+                                </li>
+                                <li>
+                                    <p class="font-semibold">10th World Congress of African Linguistics (W10CAL)</p>
+                                    <p>7-11 June 2021</p>
+                                    <p>A phonological study of the Tegem language (Oral presentation) <a href="#" class="text-blue-500 hover:underline">[Slides]</a></p>
+                                </li>
+                                <li>
+                                    <p class="font-semibold">Grote Taaldag (Dutch Annual Linguistics Day)</p>
+                                    <p>Online, 29 Jan. 2021</p>
+                                    <p>Unravelling East Africa's Early Linguistic History (Pecha Kucha) <a href="#" class="text-blue-500 hover:underline">[Slides]</a></p>
+                                </li>
+                                <li>
+                                    <p class="font-semibold">International Congress of Linguists (ICL20)</p>
+                                    <p>2-6 July 2018</p>
+                                    <p>The consonants System of Tegem (Oral presentation) <a href="#" class="text-blue-500 hover:underline">[Slides]</a></p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow">
-                        <h3 class="text-xl font-semibold mb-2">University of Cape Town, South Africa</h3>
-                        <p>Academic Tutor, Linguistics Section (Aug. 2017 - Nov. 2017)</p>
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold mb-4 cursor-pointer" onclick="toggleCollapsible('workshops')">
+                            Workshops <i class="fas fa-chevron-down ml-2"></i>
+                        </h3>
+                        <div id="workshops" class="collapsible-content">
+                            <ul class="space-y-4">
+                                <li>
+                                    <p class="font-semibold">Reconstructing Proto-Eastern-Omo-Tana: labial rules</p>
+                                    <p>7 Dec. 2023, Cushitic meeting, Paris, France <a href="#" class="text-blue-500 hover:underline">[Slides]</a></p>
+                                </li>
+                                <li>
+                                    <p class="font-semibold">Topics in the phonological reconstruction of Eastern Omo-Tana</p>
+                                    <p>12–13 Jun. 2023, Somali Workshop, Gothenburg, Sweden <a href="#" class="text-blue-500 hover:underline">[Slides]</a></p>
+                                </li>
+                                <li>
+                                    <p class="font-semibold">Historical development of the pluratives in Cushitic</p>
+                                    <p>3-4 Nov. 2022, Workshop on Cushitic Languages, Paris, France <a href="#" class="text-blue-500 hover:underline">[Slides]</a></p>
+                                </li>
+                                <li>
+                                    <p class="font-semibold">Doing fieldwork on trees in the Tanzanian Rift Valley: names, categorization, usage, and eco-zones</p>
+                                    <p>11 May 2022, Workshop on Interpreting the Natural World: Linguistic and Cultural Perspectives on Ecological Knowledge, Cologne, Germany <a href="#" class="text-blue-500 hover:underline">[Slides]</a></p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow">
-                        <h3 class="text-xl font-semibold mb-2">University of Khartoum, Sudan</h3>
-                        <p>Teaching Assistant, Department of Linguistics (July 2014 to Jan. 2017)</p>
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold mb-4 cursor-pointer" onclick="toggleCollapsible('seminars')">
+                            Seminars <i class="fas fa-chevron-down ml-2"></i>
+                        </h3>
+                        <div id="seminars" class="collapsible-content">
+                            <ul class="space-y-4">
+                                <li>
+                                    <p class="font-semibold">A reconstruction of selected Eastern Omo-Tana root extensions: Number and gender</p>
+                                    <p>29 Nov. 2023, Séminaire du Llacan, Paris, France <a href="#" class="text-blue-500 hover:underline">[Slides]</a></p>
+                                </li>
+                                <li>
+                                    <p class="font-semibold">Lateral obstruents in the Taita Hills: An areal-historical perspective</p>
+                                    <p>17 May 2023, Rift Valley Network Webinar <a href="#" class="text-blue-500 hover:underline">[Slides]</a></p>
+                                </li>
+                                <li>
+                                    <p class="font-semibold">Cushitic pluratives and a link between Tanzanian Cushitic and East Cushitic</p>
+                                    <p>11 Nov. 2022, LUCL Colloquium, Leiden, Netherlands <a href="#" class="text-blue-500 hover:underline">[Slides]</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cushitic-database" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="section-heading">Cushitic Database</h2>
+                <div class="card">
+                    <p class="mb-6">The (East) Cushitic Database is a comprehensive resource for researchers, linguists, and anyone interested in Cushitic languages. It contains detailed information on phonology, morphology, and lexicons of various Cushitic languages.</p>
+                    <div class="mb-6">
+                        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQRfGyj3tMw0bLX4fRuBi0eWbH_M7d41GY1tLRGu6bfVKRdilVurvpDXcWG1FMHjBKvf8Pp_TuSi7Qj/pubhtml?widget=true&amp;headers=false" width="100%" height="500"></iframe>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Features</h3>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Comprehensive word lists</li>
+                                <li>Phonological inventories</li>
+                                <li>Morphological paradigms</li>
+                                <li>Comparative Data</li>
+                                <li>Historical linguistic data</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Languages Included (Mainly EC)</h3>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Saho
+                                    Afar
+                                <li>Rendille
+                                    Somali
+                                    Maay
+                                    Boni</li>
+                                <li>Arbore
+                                    Dhaasanac
+                                    Elmolo
+                                    Bayso</li>
+                                <li>Hadiyya
+                                    Kambaata
+                                    Sidaama
+                                    Gedeo
+                                    Burji</li>
+                                <li>Oromo
+                                    Diraytata
+                                    Mositacha
+                                    Konso</li>
+                                <li>Gawwada
+                                    Ts'amakko
+                                    Yaaku</li>
+                                <li>Dahalo</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -233,7 +378,9 @@
                         <li><a href="#about" class="hover:text-yellow-500">About</a></li>
                         <li><a href="#research" class="hover:text-yellow-500">Research</a></li>
                         <li><a href="#publications" class="hover:text-yellow-500">Publications</a></li>
+                        <li><a href="#presentations" class="hover:text-yellow-500">Presentations</a></li>
                         <li><a href="#teaching" class="hover:text-yellow-500">Teaching</a></li>
+                        <li><a href="#cushitic-database" class="hover:text-yellow-500">Cushitic Database</a></li>
                         <li><a href="#blog" class="hover:text-yellow-500">Blog</a></li>
                         <li><a href="#contact" class="hover:text-yellow-500">Contact</a></li>
                     </ul>
@@ -257,29 +404,29 @@
         // Mobile menu toggle
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
-
+    
         menuToggle.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-
+    
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
+    
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
-
+    
                 // Close mobile menu if open
                 mobileMenu.classList.add('hidden');
             });
         });
-
+    
         // Intersection Observer for section highlighting
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-link');
-
+    
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -293,11 +440,11 @@
                 }
             });
         }, { threshold: 0.5 });
-
+    
         sections.forEach(section => {
             observer.observe(section);
         });
-
+    
         // Form submission (you would need to implement the backend for this)
         const contactForm = document.querySelector('#contact form');
         contactForm.addEventListener('submit', (e) => {
@@ -306,7 +453,7 @@
             alert('Thank you for your message. I will get back to you soon!');
             contactForm.reset();
         });
-
+    
         // Newsletter subscription (you would need to implement the backend for this)
         const newsletterForm = document.querySelector('footer form');
         newsletterForm.addEventListener('submit', (e) => {
@@ -315,6 +462,48 @@
             alert('Thank you for subscribing to my newsletter!');
             newsletterForm.reset();
         });
+    
+        // Optimize navigation menu for smaller screens
+        function adjustNavigation() {
+            const navContainer = document.querySelector('nav .md\\:flex');
+            const moreDropdown = document.getElementById('more-dropdown');
+            const moreButton = document.getElementById('more-button');
+    
+            if (window.innerWidth < 1024) { // Adjust this breakpoint as needed
+                const visibleItems = 5; // Adjust this number to control how many items are always visible
+                const navItems = Array.from(navContainer.children);
+    
+                if (navItems.length > visibleItems && !moreDropdown) {
+                    const dropdownContent = document.createElement('div');
+                    dropdownContent.id = 'more-dropdown';
+                    dropdownContent.className = 'absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20 hidden';
+    
+                    const moreBtn = document.createElement('button');
+                    moreBtn.id = 'more-button';
+                    moreBtn.className = 'nav-link';
+                    moreBtn.textContent = 'More';
+                    moreBtn.addEventListener('click', () => dropdownContent.classList.toggle('hidden'));
+    
+                    navItems.slice(visibleItems).forEach(item => {
+                        const clone = item.cloneNode(true);
+                        clone.className = 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100';
+                        dropdownContent.appendChild(clone);
+                        item.remove();
+                    });
+    
+                    navContainer.appendChild(moreBtn);
+                    navContainer.appendChild(dropdownContent);
+                }
+            } else if (moreDropdown) {
+                const dropdownItems = Array.from(moreDropdown.children);
+                dropdownItems.forEach(item => navContainer.insertBefore(item, moreButton));
+                moreButton.remove();
+                moreDropdown.remove();
+            }
+        }
+    
+        window.addEventListener('resize', adjustNavigation);
+        adjustNavigation(); // Call on initial load
     </script>
 </body>
 </html>
