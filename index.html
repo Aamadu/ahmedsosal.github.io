@@ -3,56 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ahmed Sosal's website exploring the linguistic history of Cushitic people in East Africa.">
-    <meta name="keywords" content="Linguistics, Cushitic languages, East Africa, Research, Publications">
+    <meta name="description" content="Ahmed Sosal - Linguist specializing in Cushitic languages and historical linguistics">
+    <meta name="keywords" content="Ahmed Sosal, linguist, Cushitic languages, language documentation, language description, historical linguistics, East Africa, Research, phonology, Lafofa, Tegem, Sudan, Sudanese languages">
     <meta property="og:title" content="Ahmed Sosal - Linguist">
     <meta property="og:description" content="Exploring the linguistic history of Cushitic people in East Africa.">
     <meta property="og:image" content="images/Tz house.jpg">
     <title>Ahmed Sosal - Linguist</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-    <style>
-        .hero {
-            background-image: url('images/Tz house.jpg');
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-        }
-        .nav-link:hover {
-            color: #F59E0B;
-        }
-        .section-heading {
-            @apply text-3xl font-bold mb-8 text-center;
-        }
-        .card {
-            @apply bg-white p-6 rounded-lg shadow-lg transition duration-300 ease-in-out;
-        }
-        .card:hover {
-            @apply transform -translate-y-1 shadow-xl;
-        }
-        .collapsible-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        .collapsible-content.open {
-            max-height: 1000px; /* Adjust this value as needed */
-        }
-        .section-title {
-            @apply text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-2;
-        }
-        .subsection-title {
-            @apply text-xl font-semibold mb-2 mt-4;
-        }
-        .list-item {
-            @apply mb-1;
-        }
-    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="path/to/your/main.css">
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="font-sans bg-gray-100">
+    <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
     <header class="bg-gray-800 text-white sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold">Ahmed Sosal</a>
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center" role="navigation" aria-label="Main Navigation">
+            <a href="#" class="text-xl font-bold" aria-label="Homepage">Ahmed Sosal</a>
             <div class="hidden md:flex space-x-4">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#publications" class="nav-link">Publications</a>
@@ -61,7 +30,12 @@
                 <a href="#blog" class="nav-link">Blog</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
-            <button class="md:hidden" id="menu-toggle">
+            <button id="darkModeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+              </button>
+              <button class="md:hidden" id="menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
@@ -72,12 +46,13 @@
             <a href="#cushitic-database" class="block py-2">Cushitic Database</a>
             <a href="#blog" class="block py-2">Blog</a>
             <a href="#contact" class="block py-2">Contact</a>
-        </div>
+        </nav> 
     </header>
 
     <main>
-        <section id="home" class="hero h-screen flex items-center">
-            <div class="container mx-auto px-6 text-white">
+        <main id="main-content"></main>
+        <section id="home" class="hero h-screen flex items-center relative; fade-in">
+            <div class="container mx-auto px-6 text-white relative z-10">
                 <h1 class="text-5xl font-bold mb-4">Exploring the Linguistic history of the Cushitic People in East African</h1>
                 <p class="text-xl mb-8">Ahmed Sosal | Linguist | Researcher | Lecturer</p>
                 <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded">Get in Touch</a>
@@ -93,22 +68,43 @@
                     </div>
                     <div class="w-full md:w-2/3 px-4">
                         <p class="mb-4">I am a linguist dedicated to unraveling the complexities of language through rigorous research and fieldwork. Currently pursuing my PhD at Leiden University, I am deeply engaged in the study of East Cushitic languages, with a particular focus on their phonological, morphological, and historical aspects.</p>
-                        <h3 class="subsection-title">Education</h3>
-                        <ul class="list-disc list-inside mb-4">
-                            <li class="list-item">PhD in Linguistics, Leiden University, Netherlands (2020 - present)</li>
-                            <li class="list-item">MA in Linguistics, University of Cape Town, South Africa (2017 - 2019)</li>
-                            <li class="list-item">BA in Linguistics (Honors), University of Khartoum, Sudan (2007 - 2012)</li>
-                        </ul>
-                        <h3 class="subsection-title mt-6">Areas of Expertise</h3>
+                        <h3 class="subsection-title mt-6">Fields of interest</h3>
                         <ul class="list-disc list-inside">
                             <li class="list-item">Phonological and morphological studies</li>
                             <li class="list-item">East Cushitic languages</li>
-                            <li class="list-item">Linguistic fieldwork</li>
+                            <li class="list-item">Descriptive Linguistics</li>
                             <li class="list-item">Historical linguistics</li>
                             <li class="list-item">Language documentation</li>
                         </ul>
                     </div>
                 </div>
+                <h3 class="subsection-title mt-6">Education</h3>
+                <div class="timeline mt-8">
+                    <div class="timeline-item">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-content">
+                        <h3 class="timeline-title">PhD in Linguistics</h3>
+                        <p class="timeline-date">2020 - present</p>
+                        <p>Leiden University, Netherlands</p>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-content">
+                        <h3 class="timeline-title">MA in Linguistics</h3>
+                        <p class="timeline-date">2017 - 2019</p>
+                        <p>University of Cape Town, South Africa</p>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-content">
+                        <h3 class="timeline-title">BA in Linguistics (Honors)</h3>
+                        <p class="timeline-date">2007 - 2012</p>
+                        <p>University of Khartoum, Sudan</p>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </section>
         
@@ -152,7 +148,7 @@
                 </div>
             </div>
         </section>
-
+        
         <section id="publications" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold mb-8">Publications</h2>
@@ -173,7 +169,7 @@
 
         <section id="presentations" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="section-heading">Presentations</h2>
+                <h2 class="section-title text-3xl font-bold mb-8">Presentations</h2>
                 <div class="space-y-8">
                     <div class="card">
                         <h3 class="text-2xl font-semibold mb-4 cursor-pointer" onclick="toggleCollapsible('conferences')" role="button" aria-expanded="false" aria-controls="conferences">
@@ -210,7 +206,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <h3 class="text-2xl font-semibold mb-4 cursor-pointer" onclick="toggleCollapsible('workshops')">
+                        <h3 class="text-2xl font-semibold mb-4 cursor-pointer" onclick="toggleCollapsible('workshops')" role="button" aria-expanded="false" aria-controls="workshops">
                             Workshops <i class="fas fa-chevron-down ml-2"></i>
                         </h3>
                         <div id="workshops" class="collapsible-content">
@@ -235,7 +231,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <h3 class="text-2xl font-semibold mb-4 cursor-pointer" onclick="toggleCollapsible('seminars')">
+                        <h3 class="text-2xl font-semibold mb-4 cursor-pointer" onclick="toggleCollapsible('seminars')" role="button" aria-expanded="false" aria-controls="seminars">
                             Seminars <i class="fas fa-chevron-down ml-2"></i>
                         </h3>
                         <div id="seminars" class="collapsible-content">
@@ -316,7 +312,7 @@
                 <h2 class="text-3xl font-bold mb-8">Latest Blog Posts</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-gray-100 rounded-lg overflow-hidden">
-                        <img src="images/Cushitic Family & Map_15022024.png" alt="Blog post image" class="w-full h-48 object-cover">
+                        <img src="images/Cushitic Family & Map_15022024.png" alt="Blog post image" class="w-full h-48 object-cover" loading="lazy" >
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">The Fascinating World of East Cushitic Languages</h3>
                             <p class="mb-4">Explore the unique features and historical significance of East Cushitic languages in this comprehensive overview.</p>
@@ -324,7 +320,7 @@
                         </div>
                     </div>
                     <div class="bg-gray-100 rounded-lg overflow-hidden">
-                        <img src="images/fieldwork_Tz.jpg" alt="Blog post image" class="w-full h-48 object-cover">
+                        <img src="images/fieldwork_Tz.jpg" alt="Blog post image" class="w-full h-48 object-cover" loading="lazy" >
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">Fieldwork Chronicles: Challenges and Triumphs</h3>
                             <p class="mb-4">Join me as I recount my experiences conducting linguistic fieldwork in facinating regions in East Africa.</p>
@@ -332,7 +328,7 @@
                         </div>
                     </div>
                     <div class="bg-gray-100 rounded-lg overflow-hidden">
-                        <img src="images/TegemFiedwork.jpg" alt="Blog post image" class="w-full h-48 object-cover">
+                        <img src="images/TegemFiedwork.jpg" alt="Blog post image" class="w-full h-48 object-cover" loading="lazy" >
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">The Importance of Language Documentation</h3>
                             <p class="mb-4">Discover why preserving endangered languages is crucial for maintaining cultural diversity and human knowledge.</p>
@@ -378,6 +374,10 @@
                             <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600">
                                 <i class="fab fa-academia fa-2x"></i>
                             </a>
+                        </a>
+                        <a href="https://x.com/ahmed_sosal" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
                         </div>
                     </div>
                 </div>
@@ -392,6 +392,7 @@
                     <h3 class="text-xl font-bold mb-2">Ahmed Sosal</h3>
                     <p>Linguist | Researcher | Lecturer</p>
                 </div>
+                
                 <div class="w-full md:w-1/3 mb-6 md:mb-0">
                     <h3 class="text-xl font-bold mb-2">Quick Links</h3>
                     <ul class="space-y-2">
@@ -420,6 +421,35 @@
     </footer>
 
     <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+function enableDarkMode() {
+  body.classList.add('dark-mode');
+  localStorage.setItem('darkMode', 'enabled');
+}
+
+function disableDarkMode() {
+  body.classList.remove('dark-mode');
+  localStorage.setItem('darkMode', null);
+}
+
+let darkMode = localStorage.getItem('darkMode');
+
+if (darkMode === 'enabled') {
+  enableDarkMode();
+}
+
+darkModeToggle.addEventListener('click', () => {
+  darkMode = localStorage.getItem('darkMode');
+  
+  if (darkMode !== 'enabled') {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
+});
+
         // Mobile menu toggle
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -430,17 +460,28 @@
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
 
-                // Close mobile menu if open
-                mobileMenu.classList.add('hidden');
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
             });
-        });
+
+            // Update URL without page reload
+            history.pushState(null, '', `#${targetId}`);
+
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        }
+    });
+});
 
         // Intersection Observer for section highlighting
         const sections = document.querySelectorAll('section');
@@ -465,22 +506,53 @@
         });
 
         // Collapsible sections
-        function toggleCollapsible(id) {
-            const content = document.getElementById(id);
-            content.classList.toggle('open');
-            const icon = content.previousElementSibling.querySelector('i');
-            icon.classList.toggle('fa-chevron-down');
-            icon.classList.toggle('fa-chevron-up');
-        }
+        function toggleCollapsible(sectionId) {
+    const section = document.getElementById(sectionId);
+    const icon = section.previousElementSibling.querySelector('i');
+    const expanded = section.classList.contains('open');
+
+    section.classList.toggle('open');
+    icon.classList.toggle('fa-chevron-down', expanded);
+    icon.classList.toggle('fa-chevron-up', !expanded);
+
+    section.previousElementSibling.setAttribute('aria-expanded', !expanded);
+}
 
         // Form submission (you would need to implement the backend for this)
         const contactForm = document.querySelector('#contact form');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            // Here you would typically send the form data to your server
-            alert('Thank you for your message. I will get back to you soon!');
-            contactForm.reset();
-        });
+
+contactForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  
+  const name = contactForm.querySelector('input[name="name"]').value;
+  const email = contactForm.querySelector('input[name="email"]').value;
+  const message = contactForm.querySelector('textarea[name="message"]').value;
+  
+  if (!name || !email || !message) {
+    alert('Please fill in all fields');
+    return;
+  }
+  
+  try {
+    const response = await fetch('/api/send-message', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, message }),
+    });
+    
+    if (response.ok) {
+      alert('Message sent successfully!');
+      contactForm.reset();
+    } else {
+      throw new Error('Failed to send message');
+    }
+  } catch (error) {
+    console.error('Error sending message:', error);
+    alert('Failed to send message. Please try again later.');
+  }
+});
 
         // Newsletter subscription (you would need to implement the backend for this)
         const newsletterForm = document.querySelector('footer form');
@@ -532,6 +604,43 @@
 
         window.addEventListener('resize', adjustNavigation);
         adjustNavigation(); // Call on initial load
+
+        const fadeInElements = document.querySelectorAll('.fade-in');
+
+    const fadeInObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100');
+                entry.target.classList.remove('opacity-0');
+                fadeInObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fadeInElements.forEach(element => {
+        element.classList.add('opacity-0', 'transition', 'duration-1000');
+        fadeInObserver.observe(element);
+    });
     </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+     <script>
+     particlesJS("hero", {
+       particles: {
+         number: { value: 80, density: { enable: true, value_area: 800 } },
+         color: { value: "#ffffff" },
+         shape: { type: "circle" },
+         opacity: { value: 0.5, random: false },
+         size: { value: 3, random: true },
+         line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+         move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+       },
+       interactivity: {
+         detect_on: "canvas",
+         events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+         modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+       },
+       retina_detect: true
+     });
+     </script>
 </body>
 </html>
