@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentations - Ahmed Sosal</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header class="fixed w-full z-50">
+        <nav class="bg-transparent text-white py-4 transition duration-300">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="#home" class="text-2xl font-bold">Ahmed Sosal</a>
+                <ul class="hidden md:flex space-x-4">
+                    <a href="index.html#home" class="nav-link">Home</a>
+                    <a href="index.html#publications" class="nav-link">Publications</a>
+                    <a href="presentations.html" class="nav-link">Presentations</a>
+                    <a href="cushitic-database.html" class="nav-link">Cushitic Database</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="press_outreach" class="nav-link">Press & Outreach</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </ul>
+            <button id="darkModeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+              </button>
+              <button class="md:hidden" id="menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-700 p-4">
+            <a href="index.html#home" class="block py-2">Home</a>
+            <a href="#index.html#about" class="block py-2">About</a>
+            <a href="#index.html#publications" class="block py-2">Publications</a>
+            <a href="#presentations.html" class="block py-2">Presentations</a>
+            <a href="#cushitic-database.html" class="block py-2">Cushitic Database</a>
+            <a href="#blog.html" class="block py-2">Blog</a>
+            <a href="press_outreach.html" class="block py-2">Press & Outreach</a>
+            <a href="#index.html#contact" class="block py-2">Contact</a>
+        </nav> 
+    </header>
+
+    <main>
+        <section class="hero bg-gray-800 text-white py-20">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl font-bold mb-4">Publications</h1>
+                <p class="text-xl">Explore my recent publications and research findings.</p>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <!-- Add presentation content here -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold mb-4">Presentation Title</h2>
+                    <p class="mb-4">Date: Month Day, Year</p>
+                    <p class="mb-4">Conference/Event: Name of the conference or event</p>
+                    <p class="mb-4">Description of the presentation...</p>
+                    <a href="#" class="text-blue-500 hover:underline">View Slides</a>
+                </div>
+                <!-- Repeat for other presentations -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Ahmed Sosal. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://www.linkedin.com/in/ahmedsosal" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a href="https://www.researchgate.net/profile/Ahmed-Sosal" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500">
+                    <i class="fab fa-researchgate fa-lg"></i>
+                </a>
+                <a href="https://x.com/ahmed_sosal" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500">
+                    <i class="fab fa-twitter fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

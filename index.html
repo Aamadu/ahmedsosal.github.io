@@ -7,108 +7,172 @@
     <meta name="keywords" content="Ahmed Sosal, linguist, Cushitic languages, language documentation, language description, historical linguistics, East Africa, Research, phonology, Lafofa, Tegem, Sudan, Sudanese languages">
     <meta property="og:title" content="Ahmed Sosal - Linguist">
     <meta property="og:description" content="Exploring the linguistic history of Cushitic people in East Africa.">
-    <meta property="og:image" content="images/Tz house.jpg">
+    <meta property="og:image" content="images/cover1.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ahmed Sosal - Linguist">
+    <meta name="twitter:description" content="Exploring the linguistic history of Cushitic people in East Africa.">
+    <meta name="twitter:image" content="images/cover1.jpg">
     <title>Ahmed Sosal - Linguist</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="preload" as="style" href="path/to/your/main.css">
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="font-sans bg-gray-100">
+<body class="bg-gray-100 text-gray-900">
     <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
-    <header class="bg-gray-800 text-white sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center" role="navigation" aria-label="Main Navigation">
-            <a href="#" class="text-xl font-bold" aria-label="Homepage">Ahmed Sosal</a>
-            <div class="hidden md:flex space-x-4">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#publications" class="nav-link">Publications</a>
-                <a href="#presentations" class="nav-link">Presentations</a>
-                <a href="#cushitic-database" class="nav-link">Cushitic Database</a>
-                <a href="#blog" class="nav-link">Blog</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <button id="darkModeToggle" aria-label="Toggle dark mode" aria-pressed="false">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-              </button>
-              <button class="md:hidden" id="menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
-                <i class="fas fa-bars"></i>
-            </button>
+    <header class="fixed w-full z-50 shadow-md transition-all duration-300">
+        <nav class="bg-transparent text-white py-4 transition duration-300">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="index.html"><img src="images/logo_final-white.png" height="70" width="70" alt="cuxhaven-times-font" border="0"></a>
+                <div class="hidden md:flex space-x-4">
+                    <a href="index.html#home" class="nav-link">Home</a>
+                    <a href="index.html#publications" class="nav-link">Publications</a>
+                    <a href="presentations.html" class="nav-link">Presentations</a>
+                    <a href="cushitic-database.html" class="nav-link">Database</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="press_outreach.html" class="nav-link">Sci-com</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+
+        <button class="md:hidden" id="menu-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-700 p-4">
-            <a href="#about" class="block py-2">About</a>
-            <a href="#publications" class="block py-2">Publications</a>
-            <a href="#presentations" class="block py-2">Presentations</a>
-            <a href="#cushitic-database" class="block py-2">Cushitic Database</a>
-            <a href="#blog" class="block py-2">Blog</a>
-            <a href="#contact" class="block py-2">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <a href="index.html#home" class="block py-2 px-4 hover:bg-gray-200">Home</a>
+            <a href="index.html#publications" class="block py-2 px-4 hover:bg-gray-200">Publications</a>
+            <a href="presentations.html" class="block py-2 px-4 hover:bg-gray-200">Presentations</a>
+            <a href="cushitic-database.html" class="block py-2 px-4 hover:bg-gray-200">Database</a>
+            <a href="blog.html" class="block py-2 px-4 hover:bg-gray-200">Blog</a>
+            <a href="press_outreach.html" class="block py-2 px-4 hover:bg-gray-200">Sci-com</a>
+            <a href="index.html#contact" class="block py-2 px-4 hover:bg-gray-200">Contact</a>
         </nav> 
     </header>
 
     <main>
         <main id="main-content"></main>
-        <section id="home" class="hero h-screen flex items-center relative; fade-in">
-            <div class="container mx-auto px-6 text-white relative z-10">
-                <h1 class="text-5xl font-bold mb-4">Exploring the Linguistic history of the Cushitic People in East African</h1>
-                <p class="text-xl mb-8">Ahmed Sosal | Linguist | Researcher | Lecturer</p>
-                <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded">Get in Touch</a>
+        <section id="home" class="hero h-screen flex items-center justify-center bg-cover bg-center text-white" style="background-image: url('images/louvreBrown.jpg');">
+            <div class="container text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 animate__animated animate__fadeInDown">Ahmed Sosal</h1>
+                <p class="text-xl md:text-2xl mb-8 animate__animated animate__fadeInUp">Linguist | Researcher | Lecturer</p>
+                <a href="#contact" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded">Get in Touch</a>
             </div>
+            <div class="overlay"></div>
         </section>
-
+        
         <section id="about" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold mb-8">About</h2>
-                <div class="flex flex-wrap -mx-4">
+                <div class="container mx-auto flex flex-col md:flex-row items-center">
                     <div class="w-full md:w-1/3 px-4 mb-8">
-                        <img src="images/profile.jpg" alt="Ahmed Sosal" class="rounded-lg shadow-md w-full" loading="lazy">
+                        <img src="images/profile.jpg" alt="Ahmed Sosal" class="rounded-full shadow-lg">
                     </div>
-                    <div class="w-full md:w-2/3 px-4">
-                        <p class="mb-4">I am a linguist dedicated to unraveling the complexities of language through rigorous research and fieldwork. Currently pursuing my PhD at Leiden University, I am deeply engaged in the study of East Cushitic languages, with a particular focus on their phonological, morphological, and historical aspects.</p>
+                    <div class="w-full md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+                        <p class="mb-4">I am a linguist interested in exploring the complexities of language through rigorous research and fieldwork. Currently pursuing my PhD at Leiden University, I am deeply engaged in the study of East Cushitic languages, with a particular focus on their phonological and morphological aspects from a historical perspective.</p>
                         <h3 class="subsection-title mt-6">Fields of interest</h3>
                         <ul class="list-disc list-inside">
                             <li class="list-item">Phonological and morphological studies</li>
-                            <li class="list-item">East Cushitic languages</li>
+                            <li class="list-item">Cushitic languages</li>
+                            <li class="list-item">Sudanese Arabic</li>
                             <li class="list-item">Descriptive Linguistics</li>
                             <li class="list-item">Historical linguistics</li>
                             <li class="list-item">Language documentation</li>
                         </ul>
                     </div>
                 </div>
-                <h3 class="subsection-title mt-6">Education</h3>
-                <div class="timeline mt-8">
-                    <div class="timeline-item">
-                      <div class="timeline-dot"></div>
-                      <div class="timeline-content">
-                        <h3 class="timeline-title">PhD in Linguistics</h3>
-                        <p class="timeline-date">2020 - present</p>
-                        <p>Leiden University, Netherlands</p>
-                      </div>
+            </section>
+                <section id="about" class="py-20">
+                    <div class="container mx-auto text-center">
+                        <h2 class="text-3xl font-bold mb-8">Skills</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="skill">
+                                <i class="fas fa-language fa-3x text-primary mb-4"></i>
+                                <h3 class="text-xl font-semibold mb-2">Language Documentation</h3>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <i class="fas fa-book fa-3x text-primary mb-4"></i>
+                                <h3 class="text-xl font-semibold mb-2">Research</h3>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <i class="fas fa-chalkboard-teacher fa-3x text-primary mb-4"></i>
+                                <h3 class="text-xl font-semibold mb-2">Teaching</h3>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="timeline-item">
-                      <div class="timeline-dot"></div>
-                      <div class="timeline-content">
-                        <h3 class="timeline-title">MA in Linguistics</h3>
-                        <p class="timeline-date">2017 - 2019</p>
-                        <p>University of Cape Town, South Africa</p>
-                      </div>
+                </section>                
+                <section id="about" class="py-20 bg-gray-100">
+                    <div class="container mx-auto">
+                        <h2 class="section-title text-3xl font-bold mb-8">Professional Timeline</h2>
+                        <div class="timeline">
+                          <div class="timeline-item">
+                            <div class="timeline-content">
+                              <span class="timeline-date">2023</span>
+                              <h3 class="timeline-title">Labex Mobility Grant</h3>
+                              <p class="timeline-description">Labex EFL, LLACAN, France</p>
+                            </div>
+                          </div>
+                          <div class="timeline-item">
+                            <div class="timeline-content">
+                              <span class="timeline-date">2020 - present</span>
+                              <h3 class="timeline-title">PhD in Linguistics</h3>
+                              <p class="timeline-description">Leiden University, Netherlands</p>
+                            </div>
+                          </div>
+                          <div class="timeline-item">
+                            <div class="timeline-content">
+                              <span class="timeline-date">2017 - 2019</span>
+                              <h3 class="timeline-title">MA in Linguistics</h3>
+                              <p class="timeline-description">University of Cape Town, South Africa</p>
+                            </div>
+                          </div>
+                          <div class="timeline-item">
+                            <div class="timeline-content">
+                              <span class="timeline-date">2017</span>
+                              <h3 class="timeline-title">Mandela Rhodes Scholarship</h3>
+                              <p class="timeline-description">The Mandela Rhodes Foundation, South Africa</p>
+                            </div>
+                          </div>
+                          <div class="timeline-item">
+                            <div class="timeline-content">
+                              <span class="timeline-date">2011 - 2012</span>
+                              <h3 class="timeline-title">BA Honors in Linguistics </h3>
+                              <p class="timeline-description">University of Khartoum, Sudan</p>
+                            </div>
+                          </div>
+                      <div class="timeline-item">
+                        <div class="timeline-content">
+                          <span class="timeline-date">2007 - 2011</span>
+                          <h3 class="timeline-title">BA in Linguistics</h3>
+                          <p class="timeline-description">University of Khartoum, Sudan</p>
+                        </div>
                     </div>
-                    <div class="timeline-item">
-                      <div class="timeline-dot"></div>
-                      <div class="timeline-content">
-                        <h3 class="timeline-title">BA in Linguistics (Honors)</h3>
-                        <p class="timeline-date">2007 - 2012</p>
-                        <p>University of Khartoum, Sudan</p>
-                      </div>
-                    </div>
-                  </div>
-            </div>
         </section>
         
-        <section id="research-teaching" class="py-20 bg-gray-100">
+        <section id="about" class="py-20 bg-gray-100">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold mb-8">Research & Teaching</h2>
                 <div class="grid md:grid-cols-2 gap-6">
@@ -130,18 +194,18 @@
                         <h3 class="subsection-title">Teaching Experience</h3>
                         <ul class="space-y-4">
                             <li>
-                                <p class="font-semibold">Leiden University, Netherlands</p>
                                 <p>Lecturer, Leiden Summer School in Languages and Linguistics (2021-2024)</p>
                                 <p>Lecturer, Leiden University Centre for Linguistics (Feb. 2022 - Mar. 2022)</p>
+                                <p class="font-semibold">Leiden University, Netherlands</p>
                             </li>
                             <li>
-                                <p class="font-semibold">University of Cape Town, South Africa</p>
                                 <p>Academic Tutor, Linguistics Section (Aug. 2017 - Nov. 2017)</p>
+                                <p class="font-semibold">University of Cape Town, South Africa</p>
                             </li>
                             <li>
-                                <p class="font-semibold">University of Khartoum, Sudan</p>
                                 <p>Teaching Assistant, Department of Linguistics (July 2014 to Jan. 2017)</p>
-                                <p>Lecturer, Department of Linguistics (2020 - present)</p>
+                                <p>Lecturer, Department of Linguistics (2020 - present)
+                                <p class="font-semibold">University of Khartoum, Sudan</p>
                             </li>
                         </ul>
                     </div>
@@ -166,147 +230,81 @@
                 </div>
             </div>
         </section>
-
+        
         <section id="presentations" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="section-title text-3xl font-bold mb-8">Presentations</h2>
-                <div class="space-y-8">
-                    <div class="card">
-                        <h3 class="text-2xl font-semibold mb-4 cursor-pointer" onclick="toggleCollapsible('conferences')" role="button" aria-expanded="false" aria-controls="conferences">
-                            Conferences <i class="fas fa-chevron-down ml-2"></i>
-                        </h3>
-                        <div id="conferences" class="collapsible-content">
-                            <ul class="space-y-4">
-                                <li>
-                                    <p class="font-semibold">Roots, branches & LHEAf: Multidisciplinary perspectives on East Africa’s early history</p>
-                                    <p>6-8 June 2024, Leiden University, Netherlands</p>
-                                    <p>Sosal, A. 2024 Proto East Cushitic <a href="Documents/Sosal_Proto-East-Cushitic_LHEAF_6-8 June 2024.pdf" target="_blank" class="text-blue-500 hover:underline">[Slides]</a></p>
-                                </li>
-                                <li>
-                                    <p class="font-semibold">International Conference on Historical Linguistics (ICHL25)</p>
-                                    <p>1-5 Aug. 2022, University of Oxford, United Kingdom</p>
-                                    <p>Sosal, A. 2022 Historical development of the pluratives in Cushitic <a href="Documents/Sosal 2022 Historical Development of pluratives in Cushitic.pdf" target="_blank" class="text-blue-500 hover:underline">[Poster]</a></p>
-                                </li>
-                                <li>
-                                    <p class="font-semibold">10th World Congress of African Linguistics (W10CAL)</p>
-                                    <p>7-11 June 2021</p>
-                                    <p>Sosal 2021 A phonological study of the Tegem language <a src="#" class="text-blue-500 hover:underline" controls ></a></p>
-                                </li>
-                                <li>
-                                    <p class="font-semibold">Grote Taaldag (Dutch Annual Linguistics Day)</p>
-                                    <p>Online, 29 Jan. 2021</p>
-                                    <p>Sosal, A., Rapold, C., & Mous, M. 2021 Unravelling East Africa's Early Linguistic History (Pecha Kucha) <a href="https://osf.io/7c8m4" target="_blank" class="text-blue-500 hover:underline">[Video]</a></p>
-                                </li>
-                                <li>
-                                    <p class="font-semibold">International Congress of Linguists (ICL20)</p>
-                                    <p>2-6 July 2018</p>
-                                    <p>Sosal, A. 2018 The consonants System of Tegem <a href="#" class="text-blue-500 hover:underline"></a></p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h3 class="text-2xl font-semibold mb-4 cursor-pointer" onclick="toggleCollapsible('workshops')" role="button" aria-expanded="false" aria-controls="workshops">
-                            Workshops <i class="fas fa-chevron-down ml-2"></i>
-                        </h3>
-                        <div id="workshops" class="collapsible-content">
-                            <ul class="space-y-4">
-                                <li>
-                                    <p class="font-semibold">Sosal, A. 2023 Reconstructing Proto-Eastern-Omo-Tana: labial rules</p>
-                                    <p>7 Dec. 2023, Cushitic meeting, Paris, France <a href="#" class="text-blue-500 hover:underline"></a></p>
-                                </li>
-                                <li>
-                                    <p class="font-semibold">Sosal, A. 2023 Topics in the phonological reconstruction of Eastern Omo-Tana</p>
-                                    <p>12–13 Jun. 2023, Somali Workshop, Gothenburg, Sweden <a href="#" class="text-blue-500 hover:underline"></a></p>
-                                </li>
-                                <li>
-                                    <p class="font-semibold">Sosal, A. 2022 Historical development of the pluratives in Cushitic</p>
-                                    <p>3-4 Nov. 2022, Workshop on Cushitic Languages, Paris, France <a href="#" class="text-blue-500 hover:underline"></a></p>
-                                </li>
-                                <li>
-                                    <p class="font-semibold">Sosal, A. 2022 Doing fieldwork on trees in the Tanzanian Rift Valley: names, categorization, usage, and eco-zones</p>
-                                    <p>11 May 2022, Workshop on Interpreting the Natural World: Linguistic and Cultural Perspectives on Ecological Knowledge, Cologne, Germany <a href="#" class="text-blue-500 hover:underline"></a></p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h3 class="text-2xl font-semibold mb-4 cursor-pointer" onclick="toggleCollapsible('seminars')" role="button" aria-expanded="false" aria-controls="seminars">
-                            Seminars <i class="fas fa-chevron-down ml-2"></i>
-                        </h3>
-                        <div id="seminars" class="collapsible-content">
-                            <ul class="space-y-4">
-                                <li>
-                                    <p class="font-semibold">Sosal, A. 2023 A reconstruction of selected Eastern Omo-Tana root extensions: Number and gender</p>
-                                    <p>29 Nov. 2023, Séminaire du Llacan, Paris, France <a href="#" class="text-blue-500 hover:underline"></a></p>
-                                </li>
-                                <li>
-                                    <p class="font-semibold">Sosal, A. 2023 Lateral obstruents in the Taita Hills: An areal-historical perspective</p>
-                                    <p>17 May 2023, Rift Valley Network Webinar <a href="https://doi.org/10.5281/zenodo.7947816" class="text-blue-500 hover:underline">[Video]</a></p>
-                                </li>
-                                <li>
-                                    <p class="font-semibold">Mous, M., Christan Rapold, C., Sosal, A. 2022 The relevance of Cushitic for the linguistic history of East Africa.</p>
-                                    <p>11 Nov. 2022, LUCL Colloquium, Leiden, Netherlands <a href="Documents/The relevance of Cushitic for the linguistic history of East Africa .pdf" target="_blank" class="text-blue-500 hover:underline">[Slides]</a></p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <h2 class="section-title text-3xl font-bold mb-8">Recent Presentations</h2>
+                <ul class="space-y-4">
+                  <li>
+                    <h3 class="text-xl font-semibold">Proto East Cushitic</h3>
+                    <p>Roots, branches & LHEAf: Multidisciplinary perspectives on East Africa's early history, 6-8 June 2024, Leiden University, Netherlands</p>
+                    <a href="Documents/Sosal_Proto-East-Cushitic_LHEAF_6-8%20June%202024.pdf" class="text-blue-500 hover:underline" target="_blank"></a>
+                  </li>
+                  <li>
+                    <h3 class="text-xl font-semibold">Historical development of the pluratives in Cushitic</h3>
+                    <p>International Conference on Historical Linguistics (ICHL25), 1-5 Aug. 2022, University of Oxford, United Kingdom</p>
+                    <a href="Documents/Sosal%202022%20Historical%20Development%20of%20pluratives%20in%20Cushitic.pdf" class="text-blue-500 hover:underline" target="_blank"></a>
+                  </li>
+                  <li>
+                    <h3 class="text-xl font-semibold">A phonological study of the Tegem language</h3>
+                    <p>10th World Congress of African Linguistics (W10CAL), 7-11 June 2021</p>
+                  </li>
+                </ul>
+                <div class="text-center mt-8">
+                  <a href="presentations.html" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded">View All Presentations</a>
                 </div>
-            </div>
+                    </div>
         </section>
 
         <section id="cushitic-database" class="py-20 bg-gray-100">
-            <div class="container mx-auto px-6">
-                <b><h2 class="section-heading text-3xl font-bold mb-8">Cushitic Database (TBA)</h2></b>
+            <div class="container">
+                <h2 class="section-heading">Cushitic Database</h2>
                 <div class="card">
                     <p class="mb-6">The (East) Cushitic Database is a comprehensive resource for researchers, linguists, and anyone interested in Cushitic languages. It contains detailed information on phonology, morphology, and lexicons of various Cushitic languages.</p>
-                    <div class="mb-6">
-                        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQRfGyj3tMw0bLX4fRuBi0eWbH_M7d41GY1tLRGu6bfVKRdilVurvpDXcWG1FMHjBKvf8Pp_TuSi7Qj/pubhtml?widget=true&amp;headers=false" width="100%" height="500"></iframe>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">Features</h3>
-                            <ul class="list-disc list-inside space-y-2">
+                    
+                    <div class="content-row">
+                        <div class="text-column">
+                            <h3 class="list-heading">Features</h3>
+                            <ul class="feature-list">
                                 <li>Comprehensive word lists</li>
                                 <li>Phonological inventories</li>
-                                <li>Morphological paradigms</li>
+                                <li>Morphological featutes</li>
                                 <li>Comparative Data</li>
                                 <li>Historical linguistic data</li>
                             </ul>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">Languages Included (Mainly EC)</h3>
-                            <ul class="list-disc list-inside space-y-2">
-                                <li>Saho,
-                                    Afar
-                                <li>Rendille,
-                                    Somali,
-                                    Maay,
-                                    Boni</li>
-                                <li>Arbore,
-                                    Dhaasanac,
-                                    Elmolo,
-                                    Bayso</li>
-                                <li>Hadiyya,
-                                    Kambaata,
-                                    Sidaama,
-                                    Gedeo,
-                                    Burji</li>
-                                <li>Oromo,
-                                    Diraytata,
-                                    Mositacha,
-                                    Konso</li>
-                                <li>Gawwada,
-                                    Ts'amakko,
-                                    Yaaku</li>
+                        <div class="graph-column">
+                            <div class="graph-container">
+                                <iframe seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6yrkdtvAQHcN1OyB7I7gmXzqZu4312of833Xacly9sMO5Jtj_0io-BwvuKRNJo-wneN4yn5uU4Xok/pubchart?oid=137874704&amp;format=interactive"></iframe>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="content-row">
+                        <div class="text-column">
+                            <h3 class="list-heading">Languages (Mainly EC)</h3>
+                            <ul class="language-list">
+                                <li>Saho, Afar</li>
+                                <li>Rendille, Somali, Maay, Boni</li>
+                                <li>Arbore, Dhaasanac, Elmolo, Bayso</li>
+                                <li>Hadiyya, Kambaata, Sidaama, Gedeo, Burji</li>
+                                <li>Oromo, Diraytata, Mositacha, Konso</li>
+                                <li>Gawwada, Ts'amakko, Yaaku</li>
                                 <li>Dahalo</li>
                             </ul>
                         </div>
+                        <div class="graph-column">
+                            <div class="graph-container">
+                                <iframe seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6yrkdtvAQHcN1OyB7I7gmXzqZu4312of833Xacly9sMO5Jtj_0io-BwvuKRNJo-wneN4yn5uU4Xok/pubchart?oid=998828418&amp;format=interactive"></iframe>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="text-center">
+                    <a href="cushitic-database.html" class="cta-button">Access Full Database</a>
                 </div>
             </div>
         </section>
-
         <section id="blog" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold mb-8">Latest Blog Posts</h2>
@@ -336,6 +334,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="text-center mt-8">
+                    <a href="blog.html" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded">View All Blog Posts</a>
+                  </div>
             </div>
         </section>
 
@@ -344,78 +345,46 @@
                 <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
                 <div class="flex flex-wrap -mx-4">
                     <div class="w-full md:w-1/2 px-4 mb-8">
-                        <form class="space-y-4">
-                            <div>
-                                <label for="name" class="block mb-2">Name</label>
-                                <input type="text" id="name" name="name" class="w-full p-2 border rounded" required>
+                        <form action="https://formspree.io/f/ahmedsosal@gmail.com" method="POST" class="w-full max-w-lg mx-auto">
+                            <div class="mb-4">
+                              <label for="name" class="block text-sm font-bold mb-2">Name</label>
+                              <input type="text" id="name" name="name" required class="w-full px-3 py-2 border rounded-lg">
                             </div>
-                            <div>
-                                <label for="email" class="block mb-2">Email</label>
-                                <input type="email" id="email" name="email" class="w-full p-2 border rounded" required>
+                            <div class="mb-4">
+                              <label for="email" class="block text-sm font-bold mb-2">Email</label>
+                              <input type="email" id="email" name="email" required class="w-full px-3 py-2 border rounded-lg">
                             </div>
-                            <div>
-                                <label for="message" class="block mb-2">Message</label>
-                                <textarea id="message" name="message" rows="4" class="w-full p-2 border rounded" required></textarea>
+                            <div class="mb-4">
+                              <label for="message" class="block text-sm font-bold mb-2">Message</label>
+                              <textarea id="message" name="message" required class="w-full px-3 py-2 border rounded-lg h-32"></textarea>
                             </div>
                             <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Send Message</button>
-                        </form>
+                          </form>
                     </div>
                     <div class="w-full md:w-1/2 px-4">
                         <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
-                        <p class="mb-2"><strong>Email:</strong> ahmedsosal@gmail.com</p>
-                        <p class="mb-4"><strong>Address:</strong> Leiden University Centre for Linguistics | Leiden, Netherlands</p>
-                        <div class="flex space-x-4">
-                            <a href="https://www.linkedin.com/in/ahmedsosal" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600">
-                                <i class="fab fa-linkedin fa-2x"></i>
+                        <p class="mb-2"><i class="fas fa-envelope"></i> a.sosal@hum.leidenuniv.nl</p>
                             </a>
-                            <a href="https://www.researchgate.net/profile/Ahmed-Sosal" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600">
-                                <i class="fab fa-researchgate fa-2x"></i>
-                            </a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600">
-                                <i class="fab fa-academia fa-2x"></i>
-                            </a>
-                        </a>
-                        <a href="https://x.com/ahmed_sosal" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600">
-                            <i class="fab fa-twitter fa-2x"></i>
-                        </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section>        
     </main>
 
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-wrap justify-between">
-                <div class="w-full md:w-1/3 mb-6 md:mb-0">
-                    <h3 class="text-xl font-bold mb-2">Ahmed Sosal</h3>
-                    <p>Linguist | Researcher | Lecturer</p>
-                </div>
-                
-                <div class="w-full md:w-1/3 mb-6 md:mb-0">
-                    <h3 class="text-xl font-bold mb-2">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="hover:text-yellow-500">Home</a></li>
-                        <li><a href="#about" class="hover:text-yellow-500">About</a></li>
-                        <li><a href="#publications" class="hover:text-yellow-500">Publications</a></li>
-                        <li><a href="#presentations" class="hover:text-yellow-500">Presentations</a></li>
-                        <li><a href="#cushitic-database" class="hover:text-yellow-500">Cushitic Database</a></li>
-                        <li><a href="#blog" class="hover:text-yellow-500">Blog</a></li>
-                        <li><a href="#contact" class="hover:text-yellow-500">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="w-full md:w-1/3">
-                    <h3 class="text-xl font-bold mb-2">Newsletter</h3>
-                    <p class="mb-4">Stay updated with my latest research and publications.</p>
-                    <form class="flex">
-                        <input type="email" placeholder="Your email" class="flex-grow p-2 rounded-l focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                        <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-r">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p>&copy; 2024 Ahmed Sosal. All rights reserved.</p>
+     <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Ahmed Sosal. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://www.linkedin.com/in/ahmedsosal" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://www.researchgate.net/profile/Ahmed-Sosal" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.586 0c-2.183 0-4.204.604-5.942 1.741-1.738 1.137-3.143 2.776-4.094 4.775-.437.938-.738 1.923-.904 2.939-.146.92-.193 1.831-.193 2.741v1.603h-3.453v4.403h3.453v5.798h-5.453v-5.798h-3v5.798h-1v4.202h24v-4.202h-1v-12.801h-3.984l-.016 1.712c-.075.831-.292 1.623-.636 2.37-.342.747-.837 1.369-1.451 1.888-.614.519-1.391.915-2.252 1.153-.862.238-1.892.365-3.019.365v-3.614c.741 0 1.388-.101 1.915-.319s.965-.51 1.314-.875c.348-.365.61-.79.775-1.265.165-.474.253-.984.253-1.512 0-1.393-.567-2.55-1.681-3.441-1.114-.891-2.603-1.349-4.411-1.349v-3.888c1.468 0 2.817.265 4.02.79 1.202.527 2.224 1.262 3.046 2.189.823.928 1.458 2.039 1.89 3.31.433 1.272.66 2.666.66 4.159zm-3.453 12.801v5.798h-5.031v-5.798h5.031z"/></svg>
+                </a>
+                <a href="https://x.com/ahmed_sosal" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                </a>
             </div>
         </div>
     </footer>

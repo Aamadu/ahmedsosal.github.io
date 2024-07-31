@@ -1,14 +1,40 @@
 // scripts.js content
-document.getElementById('darkModeToggle').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    this.setAttribute('aria-pressed', document.body.classList.contains('dark-mode'));
+document.addEventListener('DOMContentLoaded', function() {
+  const navbar = document.querySelector('nav');
+  const hero = document.querySelector('.hero');
+
+  function handleScroll() {
+      const heroBottom = hero.getBoundingClientRect().bottom;
+
+      if (heroBottom <= 0) {
+          navbar.classList.remove('transparent');
+          navbar.classList.add('solid');
+      } else {
+          navbar.classList.remove('solid');
+          navbar.classList.add('transparent');
+      }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+
+  // Initial check in case the user loads the page not at the top
+  handleScroll();
 });
 
-document.getElementById('menu-toggle').addEventListener('click', function() {
-    var mobileMenu = document.getElementById('mobile-menu');
-    mobileMenu.classList.toggle('hidden');
-    this.setAttribute('aria-expanded', !mobileMenu.classList.contains('hidden'));
+// Mobile menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      this.setAttribute('aria-expanded', mobileMenu.classList.contains('hidden') ? 'false' : 'true');
+    });
+  }
 });
+
+
 
 document.getElementById('mobile-menu-button').addEventListener('click', function() {
     document.getElementById('mobile-menu').classList.toggle('hidden');
@@ -83,3 +109,66 @@ document.getElementById('mobile-menu-button').addEventListener('click', function
   window.addEventListener('scroll', handleScrollAnimation);
   window.addEventListener('load', handleScrollAnimation);
   
+  document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Sticky navbar
+    const navbar = document.querySelector('nav');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+});
+
+// Smooth scrolling for all pages
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+function setDarkMode(isDark) {
+  if (isDark) {
+    document.body.classList.add('dark-mode');
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    document.body.classList.remove('dark-mode');
+    localStorage.setItem('darkMode', null);
+  }
+}
+
+// Check for saved dark mode preference
+if (localStorage.getItem('darkMode') === 'enabled') {
+  setDarkMode(true);
+}
+
+// Add event listener to dark mode toggle button
+document.getElementById('darkModeToggle').addEventListener('click', () => {
+  setDarkMode(!document.body.classList.contains('dark-mode'));
+});
+
+// Apply dark mode on page load
+document.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    setDarkMode(true);
+  }
+});
+

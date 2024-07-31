@@ -1,0 +1,8 @@
+HTML code to embed image on websites/blogs
+<a href="https://fontmeme.com/fonts/cuxhaven-times-font/"><img src="https://fontmeme.com/permalink/240731/0b5c4caa017ff78aee5e7704d32e2751.png" alt="cuxhaven-times-font" border="0"></a>
+
+BB code to embed image in forum posts
+[url=https://fontmeme.com/fonts/cuxhaven-times-font/][img]https://fontmeme.com/permalink/240731/0b5c4caa017ff78aee5e7704d32e2751.png[/img][/url]
+
+Direct image link
+https://fontmeme.com/permalink/240731/0b5c4caa017ff78aee5e7704d32e2751.png
