@@ -34,12 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-
-
-document.getElementById('mobile-menu-button').addEventListener('click', function() {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-  });
-
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -171,4 +165,3 @@ document.addEventListener('DOMContentLoaded', () => {
     setDarkMode(true);
   }
 });
-
