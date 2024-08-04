@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Sosal - Presentations</title>
-    <link rel="preload" as="style" href="path/to/your/main.css">
+    <title>Ahmed Sosal - Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
-    <header class="bg-gray-800 text-white sticky top-0 z-50">
+    <header class="fixed w-full z-50 bg-gray-800 text-white shadow-md transition-all duration-300" x-data="{ mobileMenuOpen: false }">
         <nav class="container mx-auto px-6 py-3">
             <div class="flex justify-between items-center">
                 <a href="index.html" class="flex items-center">
@@ -75,9 +75,9 @@
                 </div>
             </div>
             <div class="dropdown">
-                <a href="cushitic-database.html" class="block py-2 px-4 hover:bg-gray-200">Database</a>
+                <a href="cushitic-database.html" class="block py-2 px-4 hover:bg-gray-200">Cushitic Database</a>
                 <div class="dropdown-content pl-4 hidden">
-                    <a href="cushitic-database.html#database" class="block py-2 px-4 hover:bg-gray-200">Data</a>
+                    <a href="cushitic-database.html#database" class="block py-2 px-4 hover:bg-gray-200">Database</a>
                     <a href="cushitic-database.html#visualTools" class="block py-2 px-4 hover:bg-gray-200">Visual Tools</a>
                 </div>
             </div>
@@ -86,92 +86,46 @@
             <a href="contact.html" class="block py-2 px-4 hover:bg-gray-200">Contact</a>
         </div>
     </header>
-
-    <main class="container mx-auto px-6 py-8">
-        <h1 class="text-3xl font-bold pt-14 mb-8">Presentations</h1>
-
-        <section id="conferences" class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Conferences</h2>
-            <ul class="space-y-6">
-                <li class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-2">Roots, branches & LHEAf: Multidisciplinary perspectives on East Africa's early history</h3>
-                    <p class="text-gray-600 mb-2">6-8 June 2024, Leiden University, Netherlands</p>
-                    <p class="mb-2">Sosal, A. 2024 Proto East Cushitic</p>
-                    <a href="Documents/Sosal_Proto-East-Cushitic_LHEAF_6-8%20June%202024.pdf" class="text-blue-500 hover:underline" target="_blank">[Slides]</a>
-                </li>
-                <li class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-2">International Conference on Historical Linguistics (ICHL25)</h3>
-                    <p class="text-gray-600 mb-2">1-5 Aug. 2022, University of Oxford, United Kingdom</p>
-                    <p class="mb-2">Sosal, A. 2022 Historical development of the pluratives in Cushitic</p>
-                    <a href="Documents/Sosal%202022%20Historical%20Development%20of%20pluratives%20in%20Cushitic.pdf" class="text-blue-500 hover:underline" target="_blank">[Poster]</a>
-                </li>
-                <li class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-2">10th World Congress of African Linguistics (W10CAL)</h3>
-                    <p class="text-gray-600 mb-2">7-11 June 2021</p>
-                    <p class="mb-2">Sosal 2021 A phonological study of the Tegem language</p>
-                </li>
-                <li class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-2">Grote Taaldag (Dutch Annual Linguistics Day)</h3>
-                    <p class="text-gray-600 mb-2">Online, 29 Jan. 2021</p>
-                    <p class="mb-2">Sosal, A., Rapold, C., & Mous, M. 2021 Unravelling East Africa's Early Linguistic History (Pecha Kucha)</p>
-                    <a href="https://osf.io/7c8m4" class="text-blue-500 hover:underline" target="_blank">[Video]</a>
-                </li>
-                <li class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-2">International Congress of Linguists (ICL20)</h3>
-                    <p class="text-gray-600 mb-2">2-6 July 2018</p>
-                    <p class="mb-2">Sosal, A. 2018 The consonants System of Tegem</p>
-                </li>
-            </ul>
-        </section>
-
-        <section id="workshops" class="mb-12">
-            <h2 class="text-2xl font-semibold mb-4">Workshops</h2>
-            <ul class="space-y-6">
-                <li class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-2">Cushitic meeting</h3>
-                    <p class="text-gray-600 mb-2">7 Dec. 2023, Paris, France</p>
-                    <p class="mb-2">Sosal, A. 2023 Reconstructing Proto-Eastern-Omo-Tana: labial rules</p>
-                </li>
-                <li class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-2">Somali Workshop</h3>
-                    <p class="text-gray-600 mb-2">12--13 Jun. 2023, Gothenburg, Sweden</p>
-                    <p class="mb-2">Sosal, A. 2023 Topics in the phonological reconstruction of Eastern Omo-Tana</p>
-                </li>
-                <li class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-2">Workshop on Cushitic Languages</h3>
-                    <p class="text-gray-600 mb-2">3-4 Nov. 2022, Paris, France</p>
-                    <p class="mb-2">Sosal, A. 2022 Historical development of the pluratives in Cushitic</p>
-                </li>
-                <li class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-2">Workshop on Interpreting the Natural World: Linguistic and Cultural Perspectives on Ecological Knowledge</h3>
-                    <p class="text-gray-600 mb-2">11 May 2022, Cologne, Germany</p>
-                    <p class="mb-2">Sosal, A. 2022 Doing fieldwork on trees in the Tanzanian Rift Valley: names, categorization, usage, and eco-zones</p>
-                </li>
-            </ul>
-        </section>
-
-        <section id="seminars" class="mb-12">
-            <h2 class="text-2xl font-semibold mb-4">Seminars</h2>
-            <ul class="space-y-6">
-                <li class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-2">Séminaire du Llacan</h3>
-                    <p class="text-gray-600 mb-2">29 Nov. 2023, Paris, France</p>
-                    <p class="mb-2">Sosal, A. 2023 A reconstruction of selected Eastern Omo-Tana root extensions: Number and gender</p>
-                </li>
-                <li class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-2">Rift Valley Network Webinar</h3>
-                    <p class="text-gray-600 mb-2">17 May 2023</p>
-                    <p class="mb-2">Sosal, A. 2023 Lateral obstruents in the Taita Hills: An areal-historical perspective</p>
-                    <a href="https://doi.org/10.5281/zenodo.7947816" class="text-blue-500 hover:underline" target="_blank">[Video]</a>
-                </li>
-                <li class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-2">LUCL Colloquium</h3>
-                    <p class="text-gray-600 mb-2">11 Nov. 2022, Leiden, Netherlands</p>
-                    <p class="mb-2">Mous, M., Christan Rapold, C., Sosal, A. 2022 The relevance of Cushitic for the linguistic history of East Africa.</p>
-                    <a href="Documents/The%20relevance%20of%20Cushitic%20for%20the%20linguistic%20history%20of%20East%20Africa%20.pdf" class="text-blue-500 hover:underline" target="_blank">[Slides]</a>
-                </li>
-            </ul>
-        </section>
+    
+    <main class="container mx-auto px-6 py-24 flex flex-wrap">
+        <h1 class="text-3xl font-bold pt-14 mb-8">Contact Me</h1>    
+        
+        <section class="mb-12">
+            <p class="mb-4">Are you interested in collaborating on research, seeking expertise in my field, or have questions about my work? I welcome professional inquiries and am always open to new opportunities. Whether you're a fellow researcher, student, or industry professional, I look forward to engaging in meaningful discussions and potential collaborations.</p>
+            <div class="mb-4 container text-center">
+                <div class="flex justify-center space-x-4 mt-4 mb-8">
+                    <a href="https://www.linkedin.com/in/ahmedsosal" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Ahmed-Sosal" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.586 0c-2.183 0-4.204.604-5.942 1.741-1.738 1.137-3.143 2.776-4.094 4.775-.437.938-.738 1.923-.904 2.939-.146.92-.193 1.831-.193 2.741v1.603h-3.453v4.403h3.453v5.798h-5.453v-5.798h-3v5.798h-1v4.202h24v-4.202h-1v-12.801h-3.984l-.016 1.712c-.075.831-.292 1.623-.636 2.37-.342.747-.837 1.369-1.451 1.888-.614.519-1.391.915-2.252 1.153-.862.238-1.892.365-3.019.365v-3.614c.741 0 1.388-.101 1.915-.319s.965-.51 1.314-.875c.348-.365.61-.79.775-1.265.165-.474.253-.984.253-1.512 0-1.393-.567-2.55-1.681-3.441-1.114-.891-2.603-1.349-4.411-1.349v-3.888c1.468 0 2.817.265 4.02.79 1.202.527 2.224 1.262 3.046 2.189.823.928 1.458 2.039 1.89 3.31.433 1.272.66 2.666.66 4.159z"/></svg>
+                    </a>
+                    <a href="https://x.com/ahmed_sosal" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <form action="https://formsubmit.co/el/gofoxe" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                    <input  id="name" type="text" placeholder="Your Name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                    <input  id="email" type="email" placeholder="Your Email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+                    <textarea  id="message" placeholder="Your message" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </section>        
     </main>
 
     <footer class="bg-gray-800 text-white py-8">
