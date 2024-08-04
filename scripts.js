@@ -178,24 +178,4 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
       alert('Please fill in all fields');
       return;
   }
-  
-  try {
-      const response = await fetch('/api/send-message', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ name, email, message }),
-      });
-      
-      if (response.ok) {
-          alert('Message sent successfully!');
-          document.getElementById('contactForm').reset();
-      } else {
-          throw new Error('Failed to send message');
-      }
-  } catch (error) {
-      console.error('Error sending message:', error);
-      alert('Failed to send message. Please try again later.');
-  }
 });
