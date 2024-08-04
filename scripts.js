@@ -167,37 +167,35 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Form submission (you would need to implement the backend for this)
-const contactForm = document.querySelector('#contact form');
-
-contactForm.addEventListener('submit', async (e) => {
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   
-  const name = contactForm.querySelector('input[name="name"]').value;
-  const email = contactForm.querySelector('input[name="email"]').value;
-  const message = contactForm.querySelector('textarea[name="message"]').value;
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
   
   if (!name || !email || !message) {
-    alert('Please fill in all fields');
-    return;
+      alert('Please fill in all fields');
+      return;
   }
   
   try {
-    const response = await fetch('/api/send-message', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, email, message }),
-    });
-    
-    if (response.ok) {
-      alert('Message sent successfully!');
-      contactForm.reset();
-    } else {
-      throw new Error('Failed to send message');
-    }
+      const response = await fetch('/api/send-message', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, message }),
+      });
+      
+      if (response.ok) {
+          alert('Message sent successfully!');
+          document.getElementById('contactForm').reset();
+      } else {
+          throw new Error('Failed to send message');
+      }
   } catch (error) {
-    console.error('Error sending message:', error);
-    alert('Failed to send message. Please try again later.');
+      console.error('Error sending message:', error);
+      alert('Failed to send message. Please try again later.');
   }
 });
