@@ -8,16 +8,24 @@
   --dark-bg: #1a202c;
   --dark-text: #e2e8f0;
   --dark-accent: #2d3748;
+  --tertiary-color: #f0b429; /* Added tertiary color */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --transition-duration: 0.3s;
   --container-padding: 6rem 1rem;
 }
 
+/* Typography Enhancements */
 body {
   font-family: var(--font-family);
   background-color: var(--light-bg);
   color: var(--light-text);
   transition: background-color var(--transition-duration), color var(--transition-duration);
+  font-size: 16px;/
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; /* Bolder headings */
+  line-height: 1.2; /* Adjusted heading line-height */
 }
 
 body.dark-mode {
@@ -104,6 +112,7 @@ header {
 
 nav {
   transition: background-color var(--transition-duration), color var(--transition-duration);
+  padding: 0.5rem 0; 
 }
 
 nav.transparent {
@@ -158,6 +167,7 @@ nav.solid {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s, transform 0.5s;
+  padding: 4rem 0;
 }
 
 .section.loaded {
@@ -167,11 +177,14 @@ nav.solid {
 
 .card {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 0.5rem; /* More rounded corners */
+  overflow: hidden; /* Hide overflowing content */
+  transition: all 0.3s ease; /* Smoother transition */
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px); /* Subtle lift on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
 }
 
 @media (max-width: 768px) {
@@ -1259,7 +1272,7 @@ body.dark-mode .dropdown-content a:hover {
   }
 }
 
-/* Styles for the tree diagram */
+ /* Styles for the tree diagram */
 .tree-diagram {
   width: 100%;
   height: auto;
@@ -1285,15 +1298,6 @@ body.dark-mode .dropdown-content a:hover {
   stroke-width: 1.5px;
 }
 
-.branch-1 { stroke: #FF6B6B; }
-.branch-2 { stroke: #4ECDC4; }
-.branch-3 { stroke: #45B7D1; }
-.branch-4 { stroke: #FFA07A; }
-.branch-5 { stroke: #9B59B6; }
-.branch-6 { stroke: #FF69B4; }
-.branch-7 { stroke: #8B4513; }
-.branch-8 { stroke: #20B2AA; }
-
 #treeContainer {
   width: 100%;
   height: 100%;
@@ -1313,27 +1317,83 @@ body.dark-mode .dropdown-content a:hover {
   }
 }
 
-  .node text {
-    font-size: 10px;
-  }
+.node text {
+  font-size: 10px;
+}
 
-  body.dark-mode {
-    background-color: var(--dark-bg);
-    color: var(--dark-text);
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
 }
 
 body.dark-mode .tree-diagram text {
-    fill: var(--dark-text);
+  fill: var(--dark-text);
 }
 
 /* Dark mode styles */
- @media (prefers-color-scheme: .dark-mode) {
-          :root {
-            --node-fill: #333;
-            --node-stroke: #ccc;
-            --text-color: white;
-            --text-bg: rgba(0, 0, 0, 0.8);
-            --link-color: #555;
-          }
-        }
+@media (prefers-color-scheme: dark) {
+  :root {
+      --node-fill: #333;
+      --node-stroke: #ccc;
+      --text-color: white;
+      --text-bg: rgba(0, 0, 0, 0.8);
+      --link-color: #555;
+  }
+}
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  z-index: 1001;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#presentationImage {
+  cursor: pointer;
+  transition: 0.3s;
+  max-width: 100%;
+  height: auto;
+}
+
+#presentationImage:hover {
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}

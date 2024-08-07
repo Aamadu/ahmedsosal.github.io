@@ -166,95 +166,96 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Tree diagram
+// Tree data
 const treeData = {
   name: "PEC",
   children: [
-      {
-          name: "PNEC",
+    {
+      name: "PNEC",
+      children: [
+        { name: "Saho" },
+        { name: "Afar" }
+      ]
+    },
+    {
+      name: "POT",
+      children: [
+        {
+          name: "PEOT",
           children: [
-              { name: "Saho" },
-              { name: "Afar" }
+            { name: "Rendille" },
+            { name: "Somali" },
+            { name: "Maay" },
+            { name: "Boni" }
           ]
-      },
-      {
-          name: "POT",
+        },
+        {
+          name: "PWOT",
           children: [
-              {
-                  name: "PEOT",
-                  children: [
-                      { name: "Rendille" },
-                      { name: "Somali" },
-                      { name: "Maay" },
-                      { name: "Boni" }
-                  ]
-              },
-              {
-                  name: "PWOT",
-                  children: [
-                      { name: "Arbore" },
-                      { name: "Dhasanach" },
-                      { name: "Elmolo" },
-                      { name: "Bayso" }
-                  ]
-              }
+            { name: "Arbore" },
+            { name: "Dhasanach" },
+            { name: "Elmolo" },
+            { name: "Bayso" }
           ]
-      },
-      {
-          name: "PHEC",
+        }
+      ]
+    },
+    {
+      name: "PHEC",
+      children: [
+        { name: "Hadiyya" },
+        { name: "Kambaata" },
+        { name: "Sidaama" },
+        { name: "Gedeo" }
+      ]
+    },
+    { name: "Burji" },
+    {
+      name: "PCEC",
+      children: [
+        { name: "Oromo" },
+        {
+          name: "PS",
           children: [
-              { name: "Hadiyya" },
-              { name: "Kambaata" },
-              { name: "Sidaama" },
-              { name: "Gedeo" }
+            { name: "Diraytata" },
+            { name: "Mositacha" },
+            { name: "Konso" }
           ]
-      },
-      { name: "Burji" },
-      {
-          name: "PECC",
+        }
+      ]
+    },
+    {
+      name: "PWEC",
+      children: [
+        {
+          name: "PD",
           children: [
-              { name: "Oromo" },
-              {
-                  name: "PS",
-                  children: [
-                      { name: "Diraytata" },
-                      { name: "Mositacha" },
-                      { name: "Konso" }
-                  ]
-              }
+            { name: "Gawwada" },
+            { name: "Ts'amakko" }
           ]
-      },
-      {
-          name: "PWEC",
-          children: [
-              {
-                  name: "PD",
-                  children: [
-                      { name: "Gawwada" },
-                      { name: "Ts'amakko" }
-                  ]
-              },
-              { name: "Yaaku" }
-          ]
-      },
-      { name: "Dahalo" }
+        },
+        { name: "Yaaku" }
+      ]
+    },
+    { name: "Dahalo" }
   ]
 };
 
-const width = 600;
-        const height = 600;
-        const radius = Math.min(width, height) / 2 - 100;
+const container = d3.select("#treeContainer");
+const width = container.node().getBoundingClientRect().width;
+const height = container.node().getBoundingClientRect().height;
+const radius = Math.min(width, height) / 2 - 50;
 
-        const svg = d3.select("#treeContainer svg")
-            .attr("width", width)
-            .attr("height", height)
-            .append("g")
-            .attr("transform", `translate(${width / 2},${height / 2})`);
+const svg = container.append("svg")
+  .attr("width", width)
+  .attr("height", height)
+  .append("g")
+  .attr("transform", `translate(${width / 2},${height / 2})`);
 
-        const root = d3.hierarchy(treeData);
-        const treeLayout = d3.tree()
-            .size([2 * Math.PI, radius])
-            .separation((a, b) => (a.parent == b.parent ? 1 : 2) / a.depth);
+const root = d3.hierarchy(treeData);
+const treeLayout = d3.tree()
+  .size([2 * Math.PI, radius])
+  .separation((a, b) => (a.parent == b.parent ? 1 : 2) / a.depth);
 
 function update(source, duration = 750) {
   const nodes = root.descendants();
@@ -263,78 +264,79 @@ function update(source, duration = 750) {
   treeLayout(root);
 
   const node = svg.selectAll('g.node')
-      .data(nodes, d => d.id || (d.id = ++i));
+    .data(nodes, d => d.id || (d.id = ++i));
 
   const nodeEnter = node.enter().append('g')
-      .attr('class', 'node')
-      .attr('transform', d => `translate(${project(source.x0 ?? 0, source.y0 ?? 0)})`);
+    .attr('class', 'node')
+    .attr('transform', d => `translate(${project(source.x0 ?? 0, source.y0 ?? 0)})`);
 
   nodeEnter.append('circle')
-      .attr('r', 5)
-      .style("fill", d => d._children ? "#ccc" : "#fff")
-      .style("stroke", d => color(d));
+    .attr('r', 5)
+    .style("fill", d => d._children ? "#ccc" : "#fff")
+    .style("stroke", d => color(d));
 
   nodeEnter.append('text')
-      .attr('dy', '.31em')
-      .attr('x', d => d.x < Math.PI === !d.children ? 6 : -6)
-      .attr('text-anchor', d => d.x < Math.PI === !d.children ? 'start' : 'end')
-      .attr('transform', d => `rotate(${(d.x < Math.PI ? d.x - Math.PI / 2 : d.x + Math.PI / 2) * 180 / Math.PI})`)
-      .text(d => d.data.name)
-      .style('fill-opacity', 0);
+    .attr('dy', '.31em')
+    .attr('x', d => d.x < Math.PI === !d.children ? 6 : -6)
+    .attr('text-anchor', d => d.x < Math.PI === !d.children ? 'start' : 'end')
+    .attr('transform', d => `rotate(${(d.x < Math.PI ? d.x - Math.PI / 2 : d.x + Math.PI / 2) * 180 / Math.PI})`)
+    .text(d => d.data.name)
+    .style('font-size', `${Math.max(10, radius / 20)}px`)
+    .style('fill-opacity', 0);
 
   const nodeUpdate = nodeEnter.merge(node);
 
   nodeUpdate.transition()
-      .duration(duration)
-      .attr('transform', d => `translate(${project(d.x, d.y)})`);
+    .duration(duration)
+    .attr('transform', d => `translate(${project(d.x, d.y)})`);
 
   nodeUpdate.select('circle')
-      .attr('r', 5)
-      .style("fill", d => d._children ? "#ccc" : "#fff")
-      .style("stroke", d => color(d));
+    .attr('r', 5)
+    .style("fill", d => d._children ? "#ccc" : "#fff")
+    .style("stroke", d => color(d));
 
   nodeUpdate.select('text')
-      .style('fill-opacity', 1)
-      .attr('transform', d => `rotate(${(d.x < Math.PI ? d.x - Math.PI / 2 : d.x + Math.PI / 2) * 180 / Math.PI})`);
+    .style('fill-opacity', 1)
+    .attr('transform', d => `rotate(${(d.x < Math.PI ? d.x - Math.PI / 2 : d.x + Math.PI / 2) * 180 / Math.PI})`);
 
   const nodeExit = node.exit().transition()
-      .duration(duration)
-      .attr('transform', d => `translate(${project(source.x, source.y)})`)
-      .remove();
+    .duration(duration)
+    .attr('transform', d => `translate(${project(source.x, source.y)})`)
+    .remove();
 
   nodeExit.select('circle')
-      .attr('r', 1e-6);
+    .attr('r', 1e-6);
 
   nodeExit.select('text')
-      .style('fill-opacity', 1e-6);
+    .style('fill-opacity', 1e-6);
 
   const link = svg.selectAll('path.link')
-      .data(links, d => d.target.id);
+    .data(links, d => d.target.id);
 
   const linkEnter = link.enter().insert('path', "g")
-      .attr("class", d => `link branch-${getBranch(d.target)}`)
-      .attr('d', d => {
-          const o = {x: source.x0 ?? 0, y: source.y0 ?? 0};
-          return diagonal({source: o, target: o});
-      });
+    .attr("class", d => `link branch-${getBranch(d.target)}`)
+    .attr('d', d => {
+      const o = { x: source.x0 ?? 0, y: source.y0 ?? 0 };
+      return diagonal({ source: o, target: o });
+    });
 
   const linkUpdate = linkEnter.merge(link);
 
   linkUpdate.transition()
-      .duration(duration)
-      .attr('d', diagonal);
+    .duration(duration)
+    .attr('d', diagonal);
 
   link.exit().transition()
-      .duration(duration)
-      .attr('d', d => {
-          const o = {x: source.x, y: source.y};
-          return diagonal({source: o, target: o});
-      })
-      .remove();
+    .duration(duration)
+    .attr('d', d => {
+      const o = { x: source.x, y: source.y };
+      return diagonal({ source: o, target: o });
+    })
+    .remove();
 
   nodes.forEach(d => {
-      d.x0 = d.x;
-      d.y0 = d.y;
+    d.x0 = d.x;
+    d.y0 = d.y;
   });
 }
 
@@ -368,28 +370,90 @@ update(root);
 
 function collapse(d) {
   if (d.children) {
-      d._children = d.children;
-      d._children.forEach(collapse);
-      d.children = null;
+    d._children = d.children;
+    d._children.forEach(collapse);
+    d.children = null;
   }
 }
 
 function expand(d) {
   if (d._children) {
-      d.children = d._children;
-      d.children.forEach(expand);
-      d._children = null;
+    d.children = d._children;
+    d.children.forEach(expand);
+    d._children = null;
   }
 }
 
-function continuousAnimation() {
+async function expandTree(node, duration = 750) {
+  if (node._children) {
+    node.children = node._children;
+    node._children = null;
+    update(node, duration);
+    await new Promise(resolve => setTimeout(resolve, duration));
+    for (const child of node.children) {
+      await expandTree(child, duration);
+    }
+  }
+}
+
+async function continuousAnimation() {
   collapse(root);
   update(root);
-  setTimeout(() => {
-      expand(root);
-      update(root);
-      setTimeout(continuousAnimation, 8000);
-  }, 3000);
+  await new Promise(resolve => setTimeout(resolve, 3000));
+  await expandTree(root);
+  setTimeout(continuousAnimation, 8000);
 }
 
 continuousAnimation();
+
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("Script loaded");
+
+  const modal = document.getElementById("imageModal");
+  const img = document.getElementById("presentationImage");
+  const modalImg = document.getElementById("modalImage");
+  const closeBtn = document.getElementsByClassName("close")[0];
+
+  if (!modal || !img || !modalImg || !closeBtn) {
+    console.error("One or more elements not found:", { modal, img, modalImg, closeBtn });
+    return;
+  }
+
+  function setModalImageSize() {
+    console.log("Setting modal image size");
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    const imageAspectRatio = modalImg.naturalWidth / modalImg.naturalHeight;
+    const windowAspectRatio = windowWidth / windowHeight;
+
+    if (imageAspectRatio > windowAspectRatio) {
+      modalImg.style.width = '90%';
+      modalImg.style.height = 'auto';
+    } else {
+      modalImg.style.width = 'auto';
+      modalImg.style.height = '90vh';
+    }
+  }
+
+  img.onclick = function() {
+    console.log("Image clicked");
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.onload = setModalImageSize;
+  }
+
+  closeBtn.onclick = function() {
+    console.log("Close button clicked");
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      console.log("Outside modal clicked");
+      modal.style.display = "none";
+    }
+  }
+
+  window.addEventListener('resize', setModalImageSize);
+  window.addEventListener('orientationchange', setModalImageSize);
+});
